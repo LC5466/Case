@@ -66,4 +66,76 @@ public class FirmaController : ControllerBase
 
         return Ok(new { message = "Filen ble behandlet", output = outputPath });
     }
+
+    [HttpGet("statistikk")]
+    public IActionResult HentStatistikk()
+    {
+        var path = Path.Combine(_env.WebRootPath ?? _env.ContentRootPath, "firmaer_output.csv");
+
+        if (!System.IO.File.Exists(path))
+            return NotFound("Filen firmaer_output.csv finnes ikke.");
+
+        var linjer = System.IO.File.ReadAllLines(path).Skip(1); // hopp over header
+        var firmaStatus = new Dictionary<string, int>();
+        var orgformFordeling = new Dictionary<string, int>();
+        var ansattFordeling = new Dictionary<string, int>
+    {
+        { "0 ansatte", 0 },
+        { "1-9 ansatte", 0 },
+        { "10-49 ansatte", 0 },
+        { "50+ ansatte", 0 }
+    };
+
+        int totalOrgform = 0;
+
+        foreach (var linje in linjer)
+        {
+            var deler = linje.Split(';');
+            if (deler.Length < 6) continue;
+
+            string status = deler[2];
+            string orgform = deler[4];
+            int.TryParse(deler[3], out int antallAnsatte);
+
+            // Status
+            if (!firmaStatus.ContainsKey(status))
+                firmaStatus[status] = 0;
+            firmaStatus[status]++;
+
+            // Organisasjonsform
+            if (!string.IsNullOrWhiteSpace(orgform))
+            {
+                if (!orgformFordeling.ContainsKey(orgform))
+                    orgformFordeling[orgform] = 0;
+                orgformFordeling[orgform]++;
+                totalOrgform++;
+            }
+
+            // Ansattfordeling
+            if (antallAnsatte == 0)
+                ansattFordeling["0 ansatte"]++;
+            else if (antallAnsatte >= 1 && antallAnsatte <= 9)
+                ansattFordeling["1-9 ansatte"]++;
+            else if (antallAnsatte >= 10 && antallAnsatte <= 49)
+                ansattFordeling["10-49 ansatte"]++;
+            else
+                ansattFordeling["50+ ansatte"]++;
+        }
+
+        // Konverter organisasjonsform til prosent
+        var orgformProsent = orgformFordeling.ToDictionary(
+            x => x.Key,
+            x => Math.Round(x.Value * 100.0 / totalOrgform, 2)
+        );
+
+        var resultat = new FirmaStatistikk
+        {
+            FirmaStatus = firmaStatus,
+            OrganisasjonsformProsent = orgformProsent,
+            AnsattFordeling = ansattFordeling
+        };
+
+        return Ok(resultat);
+    }
+
 }
