@@ -1075,10 +1075,10 @@
 /Users/lc5466/Case/case_frontend/obj/Debug/net9.0/refint/CaseFrontend.dll
 /Users/lc5466/Case/case_frontend/obj/Debug/net9.0/CaseFrontend.pdb
 /Users/lc5466/Case/case_frontend/obj/Debug/net9.0/ref/CaseFrontend.dll
-/Users/lc5466/Case/case_frontend/bin/Debug/net9.0/wwwroot/_framework/CaseFrontend.bbrxo48p7u.pdb
-/Users/lc5466/Case/case_frontend/bin/Debug/net9.0/wwwroot/_framework/CaseFrontend.7vacd6iwyg.wasm
-/Users/lc5466/Case/case_frontend/bin/Debug/net9.0/wwwroot/_framework/CaseFrontend.bbrxo48p7u.pdb.gz
-/Users/lc5466/Case/case_frontend/bin/Debug/net9.0/wwwroot/_framework/CaseFrontend.7vacd6iwyg.wasm.gz
-/Users/lc5466/Case/case_frontend/obj/Debug/net9.0/compressed/mtxltzt74x-7vacd6iwyg.gz
-/Users/lc5466/Case/case_frontend/obj/Debug/net9.0/compressed/ge1whi8g3z-bbrxo48p7u.gz
-/Users/lc5466/Case/case_frontend/obj/Debug/net9.0/compressed/q2ffit78r7-6vomb57x33.gz
+/Users/lc5466/Case/case_frontend/bin/Debug/net9.0/wwwroot/_framework/CaseFrontend.1edn84o8a9.pdb
+/Users/lc5466/Case/case_frontend/bin/Debug/net9.0/wwwroot/_framework/CaseFrontend.crhfepnhm2.wasm
+/Users/lc5466/Case/case_frontend/bin/Debug/net9.0/wwwroot/_framework/CaseFrontend.1edn84o8a9.pdb.gz
+/Users/lc5466/Case/case_frontend/bin/Debug/net9.0/wwwroot/_framework/CaseFrontend.crhfepnhm2.wasm.gz
+/Users/lc5466/Case/case_frontend/obj/Debug/net9.0/compressed/mtxltzt74x-crhfepnhm2.gz
+/Users/lc5466/Case/case_frontend/obj/Debug/net9.0/compressed/ge1whi8g3z-1edn84o8a9.gz
+/Users/lc5466/Case/case_frontend/obj/Debug/net9.0/compressed/q2ffit78r7-4ja4ocs5od.gz

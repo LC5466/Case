@@ -1,4 +1,4 @@
-using Case.Services;
+using Case_backend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +11,16 @@ builder.Services.AddHttpClient<FirmaService>();
 // Legg til Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:5285") // PORT = frontend-port
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
 
 var app = builder.Build();
 
@@ -23,6 +33,8 @@ if (app.Environment.IsDevelopment())
 
 // Tving HTTPS
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 // Autorisasjon (kan fjernes hvis du ikke bruker det)
 app.UseAuthorization();

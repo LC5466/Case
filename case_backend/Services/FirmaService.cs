@@ -1,7 +1,7 @@
-using Case.Models;
+using Case_backend.Models;
 using Newtonsoft.Json;
 
-namespace Case.Services
+namespace Case_backend.Services
 {
     public class FirmaService
     {

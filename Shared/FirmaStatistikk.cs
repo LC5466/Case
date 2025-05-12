@@ -1,4 +1,4 @@
-namespace Case.Models
+namespace Case.Shared
 {
     public class FirmaStatistikk
     {

@@ -1,4 +1,4 @@
-namespace Case.Models
+namespace Case_backend.Models
 {
     public class FirmaInfo
     {

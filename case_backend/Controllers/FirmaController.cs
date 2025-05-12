@@ -1,11 +1,12 @@
-using Case.Models;
-using Case.Services;
+using Case_backend.Models;
+using Case_backend.Services;
+using Case.Shared;
 using CsvHelper;
 using CsvHelper.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using System.Globalization;
 
-namespace Case.Controllers;
+namespace Case_backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
