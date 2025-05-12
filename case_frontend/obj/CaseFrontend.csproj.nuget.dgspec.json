@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/lc5466/Case/case_frontend/CaseFrontend/CaseFrontend.csproj": {}
+    "/Users/lc5466/Case/case_frontend/CaseFrontend.csproj": {}
   },
   "projects": {
-    "/Users/lc5466/Case/case_frontend/CaseFrontend/CaseFrontend.csproj": {
+    "/Users/lc5466/Case/case_frontend/CaseFrontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lc5466/Case/case_frontend/CaseFrontend/CaseFrontend.csproj",
+        "projectUniqueName": "/Users/lc5466/Case/case_frontend/CaseFrontend.csproj",
         "projectName": "CaseFrontend",
-        "projectPath": "/Users/lc5466/Case/case_frontend/CaseFrontend/CaseFrontend.csproj",
+        "projectPath": "/Users/lc5466/Case/case_frontend/CaseFrontend.csproj",
         "packagesPath": "/Users/lc5466/.nuget/packages/",
-        "outputPath": "/Users/lc5466/Case/case_frontend/CaseFrontend/obj/",
+        "outputPath": "/Users/lc5466/Case/case_frontend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/lc5466/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7MbDbSNUEPg=",
+  "dgSpecHash": "b6y5A/6wJhE=",
   "success": true,
-  "projectFilePath": "/Users/lc5466/Case/case_frontend/CaseFrontend/CaseFrontend.csproj",
+  "projectFilePath": "/Users/lc5466/Case/case_frontend/CaseFrontend.csproj",
   "expectedPackageFiles": [
     "/Users/lc5466/.nuget/packages/microsoft.aspnetcore.authorization/9.0.1/microsoft.aspnetcore.authorization.9.0.1.nupkg.sha512",
     "/Users/lc5466/.nuget/packages/microsoft.aspnetcore.components/9.0.1/microsoft.aspnetcore.components.9.0.1.nupkg.sha512",
