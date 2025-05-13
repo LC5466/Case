@@ -55,8 +55,8 @@ public class FirmaController : ControllerBase
         }
 
         // Lagre til CSV
-        var outputPath = Path.Combine(_env.WebRootPath ?? _env.ContentRootPath, "firmaer_output.csv");
-        using var writer = new StreamWriter(outputPath);
+        var fileName = "firmaer_output.csv";
+        using var writer = new StreamWriter(fileName);
         await writer.WriteLineAsync("OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode");
 
         foreach (var firma in firmaer)
@@ -65,7 +65,7 @@ public class FirmaController : ControllerBase
                 $"{firma.OrgNo};{firma.FirmaNavn};{firma.Status};{firma.AntallAnsatte};{firma.OrganisasjonsformKode};{firma.Naeringskode}");
         }
 
-        return Ok(new { message = "Filen ble behandlet", output = outputPath });
+        return Ok(new { message = "Filen ble behandlet", output = fileName });
     }
 
     [HttpGet("statistikk")]

@@ -18,10 +18,10 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 988690341;Acustus Holding AS;Aktiv;;AS;70.220
 985611475;Acustus Haller AS;Aktiv;;AS;46.900
 981205219;Acustus Maskinering og Hydraulikk AS;Aktiv;6;AS;28.290
-964854173;Acustus Sveis AS;Aktiv;26;AS;25.620
-914007666;SKOHJØRNET AS;Aktiv;5;AS;47.721
+964854173;Acustus Sveis AS;Aktiv;25;AS;25.620
+914007666;SKOHJØRNET AS;Aktiv;6;AS;47.721
 981682599;Bovel Eiendom AS;Slettet;;AS;
-950485922;Økoråd Narvik AS;Aktiv;17;AS;69.201
+950485922;Økoråd Narvik AS;Aktiv;16;AS;69.201
 913013670;Trusted Advisors AS;Aktiv;;AS;70.220
 989452428;Kongensgate 14 - 18 AS;Aktiv;;AS;70.220
 991559035;Aktiv Sanering AS;Aktiv;;AS;81.101
@@ -36,7 +36,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 989241079;VEIBY INVEST AS;Aktiv;;AS;68.209
 981319656;Element Arkitekter AS;Aktiv;15;AS;71.112
 935085438;Edgeing Holding AS;Aktiv;;AS;00.000
-985554595;D Mathisen Entreprenør AS;Aktiv;6;AS;41.200
+985554595;D Mathisen Entreprenør AS;Aktiv;;AS;41.200
 985836949;Merkur Regnskap SA;Aktiv;24;SA;69.201
 913304225;Næring i Nord AS;Aktiv;13;AS;73.110
 967733938;Narvik TV Rørinspeksjon AS;Aktiv;;AS;43.221
@@ -55,10 +55,10 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 988731072;AK-Regnskap AS;Aktiv;6;AS;69.201
 994791435;NARVIK EIENDOM AS;Aktiv;;AS;68.209
 912585301;Moloveien 12 AS;Aktiv;;AS;68.320
-914213924;Lindahl AS;Aktiv;7;AS;47.523
+914213924;Lindahl AS;Aktiv;6;AS;47.523
 923888985;Din Rørlegger Narvik AS;Aktiv;13;AS;43.221
 814324982;TORVET AS;Aktiv;;AS;68.209
-958276648;Malmen Pub AS;Aktiv;18;AS;56.301
+958276648;Malmen Pub AS;Aktiv;17;AS;56.301
 914443873;Frydenlund Utleie AS;Aktiv;;AS;68.209
 988450073;Ole Sørskår AS;Aktiv;;AS;70.220
 975855635;Åfjord Regnskap AS;Aktiv;29;AS;69.201
@@ -75,7 +75,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 912167429;Reidun Gulbrandsen Regnskapskontor AS;Aktiv;;AS;69.201
 986388346;Ljungmann AS;Aktiv;7;AS;25.620
 922809917;Helle Nygaard Regnskapskontor AS;Aktiv;;AS;69.201
-914087457;Lunde Bygg AS;Aktiv;10;AS;41.200
+914087457;Lunde Bygg AS;Aktiv;9;AS;41.200
 969026155;Corponor AS;Aktiv;;AS;82.990
 992356960;US PROPERTY AS;Aktiv;;AS;68.100
 989559869;J.K Utleie AS;Aktiv;;AS;68.209
@@ -95,7 +95,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 958916116;Astafjord Smolt A/S;Aktiv;21;AS;03.222
 977520053;Sandhei Holding AS;Aktiv;;AS;33.120
 987309113;Imtas Prosjekt AS;Aktiv;110;AS;33.120
-988365777;Gratanglaks AS;Aktiv;55;AS;03.211
+988365777;Gratanglaks AS;Aktiv;54;AS;03.211
 984453035;Strandveien Senter AS;Aktiv;;AS;68.209
 914455456;Hoppensprett Narvik AS;Slettet;;AS;
 987705507;Imtas Eiendom AS;Aktiv;;AS;68.209
@@ -204,7 +204,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 988591637;A Markussen Holding AS;Aktiv;;AS;68.209
 976096215;Jarnes Møbler AS;Aktiv;5;AS;31.090
 912784037;Øyjord Ridehall AS;Aktiv;;AS;68.209
-986516689;Equie Consulting Sissel Bjørklund;Aktiv;8;ENK;02.200
+986516689;Equie Consulting Sissel Bjørklund;Aktiv;9;ENK;02.200
 915018238;ZooExpressen AS;Aktiv;13;AS;47.762
 915125948;Modell Hobby AS;Slettet;;AS;
 914948142;Sparebank 1 Regnskapshuset Nord-Norge AS Avd Administrasjon;Slettet;;AS;
@@ -212,14 +212,14 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 914735084;Spektor Advokat AS;Aktiv;;AS;69.100
 912326497;North Wine & Spirits AS;Aktiv;;AS;46.341
 980866351;AIDER ACCOUNTING AS AVD BERGEN(F);Feil;;;
-915555594;EA Bygg & Betong AS GAMMEL VERSJON;Aktiv;;AS;43.990
+915555594;EA Bygg & Betong AS GAMMEL VERSJON;UnderAvvikling;;AS;43.990
 958027028;Jaklamyra Barnehage SA;Aktiv;18;SA;88.911
 970235760;Beisfjord Vannverk SA;Aktiv;;SA;36.000
 970890696;Viktor Berg Transport AS;Aktiv;8;AS;49.410
 988413356;Foldvik Bryggeferie AS;Aktiv;;AS;55.202
 993168262;Stigma Salg og Tjenester AS;Aktiv;;AS;46.694
 915662757;Trafikkskola Start AS;Aktiv;;AS;85.530
-913752058;Din Gartner-Kawa AS;Aktiv;7;AS;81.300
+913752058;Din Gartner-Kawa AS;Aktiv;8;AS;81.300
 912185001;Mee AS;Aktiv;;AS;62.020
 914150132;Emptum AS;Aktiv;;AS;70.220
 936066798;Lunt Hus AS;Aktiv;;AS;68.209
@@ -313,7 +313,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 976861213;Hurd Økonomi & Regnskap AS;Aktiv;10;AS;69.201
 971155450;Probus AS;Aktiv;6;AS;69.201
 916094051;Bjørns Bil AS;Aktiv;;AS;45.112
-951869880;Fram Kino;Aktiv;17;AS;59.140
+951869880;Fram Kino;Aktiv;18;AS;59.140
 990078424;Arena Drift AS;Aktiv;;AS;93.110
 981470850;Narvik Rideskole Skjomen AS;Aktiv;5;AS;93.190
 915991262;Vestfold Truckservice AS;Aktiv;12;AS;33.120
@@ -323,7 +323,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 987770384;Aktivapluss AS;Aktiv;7;AS;69.201
 999150985;Lyn Regnskap AS;Aktiv;;AS;68.100
 989957422;Din Regnskapsfører AS;Aktiv;;AS;69.201
-982848547;Nesttun Blomster AS;Aktiv;7;AS;47.761
+982848547;Nesttun Blomster AS;Aktiv;8;AS;47.761
 993253375;N.K.S. Kløveråsen AS;Aktiv;44;AS;86.104
 987447702;Økoråd Hadsel AS;Aktiv;13;AS;69.201
 939611908;Admit AS;Aktiv;;AS;70.220
@@ -332,7 +332,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 000000000;Ikke i bruk;Feil;;;
 980386465;Maestro Integrasjon;Aktiv;92;AS;58.290
 915498892;Ulvsvåg Eiendom AS;Aktiv;;AS;68.209
-915703534;Tøyen Sportsklubb;Aktiv;101;FLI;93.120
+915703534;Tøyen Sportsklubb;Aktiv;82;FLI;93.120
 916346220;Undo AS;Aktiv;5;AS;86.909
 981563794;Narvik Hestesportsenter Skjomen AS;Aktiv;;AS;93.110
 989410164;Strandgata 30 Eiendom Sortland AS;Aktiv;;AS;68.209
@@ -364,7 +364,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 939532595;Grefsen AS;Aktiv;9;AS;68.209
 971259582;Bærum Næringsråd;Aktiv;;FLI;94.110
 893509992;Vesterålen Varmepumper AS;Aktiv;;AS;43.222
-953686295;Høydepunkt Arrangementsservice AS;Aktiv;10;AS;79.903
+953686295;Høydepunkt Arrangementsservice AS;Aktiv;11;AS;79.903
 971402423;SKÅNLAND STALL OG RIDEKLUBB;Aktiv;;FLI;01.620
 995256673;Nordlandsmat AS;Aktiv;;AS;46.390
 915467970;Fosenterminalen Bessaker AS;Aktiv;;AS;52.211
@@ -474,7 +474,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 891677812;Bodø Volley;Aktiv;;FLI;93.120
 916497210;Aag Trafikkskole AS;Aktiv;;AS;85.530
 985606633;Geolofoten AS;Aktiv;6;AS;71.123
-813837692;Tytlandsvik Aqua AS;Aktiv;34;AS;03.212
+813837692;Tytlandsvik Aqua AS;Aktiv;36;AS;03.212
 915493157;Hårstrået Frisør Narvik AS;Aktiv;5;AS;96.020
 926087703;Økonomibyrået A/S;Slettet;;AS;
 916570422;Chang Leonard AS;Aktiv;5;AS;96.020
@@ -502,7 +502,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 988325686;GLASS I NOR Solskjerming AS;Aktiv;;AS;43.290
 990018472;K Thorbergsen Mekaniske AS;Aktiv;;AS;25.620
 980965686;Fagernesveien 4 AS;Aktiv;;AS;68.209
-996399567;Fasade & Boligteknikk AS;Aktiv;;AS;43.320
+996399567;Fasade & Boligteknikk AS;Konkurs;;AS;43.320
 992829990;Nordsalten Blikk AS;Aktiv;;AS;43.911
 997034112;Berge Anlegg AS;Aktiv;;AS;43.120
 969109689;Veteranmopeden.no Christian Westye Egeberg;Aktiv;;ENK;46.750
@@ -520,7 +520,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 992356898;Directa AS;Aktiv;22;AS;69.201
 986464492;Optimal Regnskap AS;Aktiv;10;AS;69.201
 995606038;Roy Hjelmeland;Aktiv;;ENK;55.202
-984633599;Grønt Vedlikehold AS;Aktiv;;AS;81.300
+984633599;Grønt Vedlikehold AS;Aktiv;6;AS;81.300
 971435828;Norske Grafikere;Aktiv;6;FLI;94.120
 932757249;Hundvåg Fysikalske Institutt AS;Aktiv;;AS;86.902
 912009181;AS Glea;Aktiv;35;AS;10.201
@@ -530,7 +530,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 882456412;Nordhealth Norway AS;Aktiv;21;AS;58.290
 992132957;Sanimalis AS-gammel klient;Slettet;;AS;
 991445749;Hamarøy Vekst AS;Aktiv;5;AS;88.994
-923627804;Oddmund Groven AS;Aktiv;35;AS;49.410
+923627804;Oddmund Groven AS;Aktiv;37;AS;49.410
 912066258;Vestsiden Tannlegekontor AS;Aktiv;11;AS;86.230
 979889402;Elda Foods AS;Aktiv;5;AS;10.710
 971590734;Amphibia AS;Aktiv;;AS;69.201
@@ -551,7 +551,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 912892220;United Influencers Norway AS;Aktiv;;AS;90.035
 981648714;Ptp Partner Eiendom AS;Aktiv;;AS;68.209
 916683898;Essal HHD AS;Aktiv;;AS;55.101
-966890134;Det Lille Kjøkken AS;Aktiv;29;AS;56.102
+966890134;Det Lille Kjøkken AS;Aktiv;30;AS;56.102
 997594541;Garage 15 AS;Aktiv;8;AS;46.620
 988639702;Frost Animation;Aktiv;;ENK;59.120
 998796938;Stranda Fjellgrend AS;Konkurs;;AS;41.109
@@ -604,7 +604,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 951878863;Narvik Bilutleie A/S;Aktiv;;AS;77.110
 980398730;Bm-Trading Eiendom Bjørn Martinsen AS;Aktiv;;AS;68.209
 912172910;Arctic Chef AS;Aktiv;;AS;56.290
-914884748;Henriksen Ventilasjon AS;Aktiv;39;AS;43.223
+914884748;Henriksen Ventilasjon AS;Aktiv;40;AS;43.223
 998643511;Stene Johansen AS;Aktiv;11;AS;81.300
 980738787;RegnskapsTeam Hallingdal AS;Aktiv;11;AS;69.201
 925348589;Lift Me AS;Aktiv;10;AS;77.320
@@ -707,7 +707,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 912381277;3a Eiendom 3 AS;Aktiv;;AS;68.209
 912755061;3a Eiendom 4 AS;Aktiv;;AS;68.209
 883391322;Aanerud Bakeri AS;Aktiv;40;AS;10.710
-915816614;To Bakere AS;Aktiv;12;AS;10.710
+915816614;To Bakere AS;Aktiv;13;AS;10.710
 921320787;NDS AS;Slettet;;AS;
 916882424;JLK Offshore AS;Aktiv;18;AS;78.200
 914600650;ArcticTouch AS;Aktiv;;AS;55.202
@@ -718,7 +718,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 971282185;Nakholmen Vel;Aktiv;;FLI;94.991
 916885830;Dagh Consulting AS;Aktiv;;AS;70.220
 916997868;Arctic Trial Racing AS;Aktiv;;AS;74.903
-996980685;Bærum Mur og Flis AS;Aktiv;30;AS;43.990
+996980685;Bærum Mur og Flis AS;Aktiv;31;AS;43.990
 970990534;Fosenlast AS;Aktiv;;AS;49.410
 917095019;ABK Teknikk AS;Konkurs;;AS;74.909
 989132644;Bgh Invest AS;Aktiv;;AS;45.112
@@ -835,7 +835,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 917338728;Ide Møbler Fauske AS;Aktiv;6;AS;47.591
 912186385;Hålandsdal Vekst SA;Aktiv;10;SA;85.201
 915529224;Wabi Sabi AS;Aktiv;5;AS;32.120
-812178792;T&R Haugen Maskin AS;Aktiv;6;AS;43.120
+812178792;T&R Haugen Maskin AS;Aktiv;7;AS;43.120
 988383902;Centrum - Tannklinikk AS;Aktiv;6;AS;86.230
 916585756;Rallarservice AS;Konkurs;;AS;42.120
 917513961;Nordic Mobility AS;Aktiv;;AS;62.020
@@ -871,7 +871,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 998891752;Gislerud Carpets AS;Aktiv;;AS;47.919
 916901054;Minimax Lager AS;Aktiv;;AS;68.209
 916616031;Kyst-Revisjon AS;Aktiv;;AS;00.000
-990311153;Bilpleiehallen AS;Aktiv;17;AS;45.200
+990311153;Bilpleiehallen AS;Aktiv;18;AS;45.200
 992803533;Holmøy Invest AS;Aktiv;;AS;00.000
 992803622;KH Invest AS;Aktiv;;AS;64.308
 989491067;Ditec Norge AS;Aktiv;;AS;45.320
@@ -934,7 +934,7 @@ OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode
 917767181;Senesa Foods AS;Slettet;;AS;
 919982306;Byggtjenester Nord AS;Slettet;;AS;
 975848590;Dalen Legesenter DA;Aktiv;5;DA;86.211
-987297735;Selmer Nord AS;Aktiv;14;AS;56.102
+987297735;Selmer Nord AS;Aktiv;16;AS;56.102
 974370964;KL Transport AS;Aktiv;;AS;49.410
 990693633;Astrid Trondsen AS;Aktiv;;AS;86.909
 912800261;R. Nikolaisen AS;Slettet;;AS;
