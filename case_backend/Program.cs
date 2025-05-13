@@ -37,9 +37,6 @@ app.UseHttpsRedirection();
 //IKKE FLYTT
 app.UseCors();
 
-//autorisasjon (kan fjernes hvis du ikke bruker det)
-app.UseAuthorization();
-
 //kontrollér endepunkter
 app.MapControllers();
 
