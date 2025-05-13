@@ -1,6 +1,6 @@
 namespace Case_backend.Models
 {
-    public class FirmaInfo
+    public class FirmaInfo //dette tar ut de nødvendige kriteriene
     {
         public string OrgNo { get; set; }
         public string FirmaNavn { get; set; }

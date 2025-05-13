@@ -14,7 +14,7 @@ namespace Case_backend.Services
 
         public async Task<FirmaInfo> HentFirmaInfoAsync(string orgNo, string firmaNavn)
         {
-            var url = $"https://data.brreg.no/enhetsregisteret/api/enheter/{orgNo}";
+            var url = $"https://data.brreg.no/enhetsregisteret/api/enheter/{orgNo}"; //url-en til Brønnøysund Registeret sitt API, med orgNo som input
 
             try
             {
@@ -25,7 +25,8 @@ namespace Case_backend.Services
                 var json = await response.Content.ReadAsStringAsync();
                 var data = JsonConvert.DeserializeObject<FirmaEnhet>(json);
 
-                string status = "Aktiv";
+                string status = "Aktiv"; //default status er aktiv, inntill sjekken mot Brreg-API sier noe annet
+                //statuser
                 if (data.slettedato != null)
                     status = "Slettet";
                 else if (data.konkurs == true)
@@ -49,6 +50,7 @@ namespace Case_backend.Services
             }
         }
 
+        //hvis organsissjonsnummeret ikke finnes i registeret, lag status "feil"
         private FirmaInfo LagFeil(string orgNo, string firmaNavn) => new()
         {
             OrgNo = orgNo,

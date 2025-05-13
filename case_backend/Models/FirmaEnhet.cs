@@ -1,6 +1,6 @@
 namespace Case_backend.Models
 {
-    public class FirmaEnhet
+    public class FirmaEnhet //dette er generell informasjon av en enhet i json-fila
     {
         public string organisasjonsnummer { get; set; }
         public int? antallAnsatte { get; set; }

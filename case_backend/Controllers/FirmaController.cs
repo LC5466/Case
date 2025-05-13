@@ -21,7 +21,7 @@ public class FirmaController : ControllerBase
         _env = env;
     }
 
-    [HttpPost("upload")]
+    [HttpPost("upload")] //POST responsen
     public async Task<IActionResult> UploadCsv(IFormFile file)
     {
         if (file == null || file.Length == 0)
@@ -40,13 +40,14 @@ public class FirmaController : ControllerBase
         bool isFirstLine = true;
         while (await csv.ReadAsync())
         {
+            //hvis data inneholder tittel, hopp over
             if (isFirstLine)
             {
                 isFirstLine = false;
                 continue; // hopp over header
             }
 
-            //må bytte om på rekkefølgen, da dataene er feil rekkefølge
+            //må bytte om på rekkefølgen, da dataene er feil rekkefølge i den originale fila
             var firmaNavn = csv.GetField(0)?.Trim();
             var orgNo = csv.GetField(1)?.Trim();
 
@@ -54,7 +55,7 @@ public class FirmaController : ControllerBase
             firmaer.Add(info);
         }
 
-        // Lagre til CSV
+        //lagre til CSV med de nødvendige kriteriene i henhold til oppgaven
         var fileName = "firmaer_output.csv";
         using var writer = new StreamWriter(fileName);
         await writer.WriteLineAsync("OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode");
@@ -68,7 +69,7 @@ public class FirmaController : ControllerBase
         return Ok(new { message = "Filen ble behandlet", output = fileName });
     }
 
-    [HttpGet("statistikk")]
+    [HttpGet("statistikk")] //GET responsen
     public IActionResult HentStatistikk()
     {
         var path = Path.Combine(_env.WebRootPath ?? _env.ContentRootPath, "firmaer_output.csv");
@@ -76,7 +77,7 @@ public class FirmaController : ControllerBase
         if (!System.IO.File.Exists(path))
             return NotFound("Filen firmaer_output.csv finnes ikke.");
 
-        var linjer = System.IO.File.ReadAllLines(path).Skip(1); // hopp over header
+        var linjer = System.IO.File.ReadAllLines(path).Skip(1); //hopp over header
         var firmaStatus = new Dictionary<string, int>();
         var orgformFordeling = new Dictionary<string, int>();
         var ansattFordeling = new Dictionary<string, int>
@@ -98,12 +99,12 @@ public class FirmaController : ControllerBase
             string orgform = deler[4];
             int.TryParse(deler[3], out int antallAnsatte);
 
-            // Status
+            //status
             if (!firmaStatus.ContainsKey(status))
                 firmaStatus[status] = 0;
             firmaStatus[status]++;
 
-            // Organisasjonsform
+            //organisasjonsform
             if (!string.IsNullOrWhiteSpace(orgform))
             {
                 if (!orgformFordeling.ContainsKey(orgform))
@@ -112,7 +113,7 @@ public class FirmaController : ControllerBase
                 totalOrgform++;
             }
 
-            // Ansattfordeling
+            //ansattfordeling
             if (antallAnsatte == 0)
                 ansattFordeling["0 ansatte"]++;
             else if (antallAnsatte >= 1 && antallAnsatte <= 9)
@@ -123,7 +124,7 @@ public class FirmaController : ControllerBase
                 ansattFordeling["50+ ansatte"]++;
         }
 
-        // Konverter organisasjonsform til prosent
+        //konverter organisasjonsform til prosent
         var orgformProsent = orgformFordeling.ToDictionary(
             x => x.Key,
             x => Math.Round(x.Value * 100.0 / totalOrgform, 2)
