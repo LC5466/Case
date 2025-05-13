@@ -2,13 +2,13 @@ using Case.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//legg til kontroller-støtte (nødvendig for API-controllerne dine)
+//legg til kontroller-støtte
 builder.Services.AddControllers();
 
 //registrer FirmaService som HttpClient-tjeneste
 builder.Services.AddHttpClient<FirmaService>();
 
-//legg til Swagger/OpenAPI
+//legg til Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

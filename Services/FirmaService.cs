@@ -23,7 +23,7 @@ namespace Case.Services
                     return LagFeil(orgNo, firmaNavn);
 
                 var json = await response.Content.ReadAsStringAsync();
-                var data = JsonConvert.DeserializeObject<FirmaEnhet>(json);
+                var data = JsonConvert.DeserializeObject<FirmaEnhet>(json); //gjør om til json-objekt
 
                 string status = "Aktiv"; //default status er aktiv, inntill sjekken mot Brreg-API sier noe annet
                 //statuser

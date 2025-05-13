@@ -12,6 +12,8 @@ namespace Case.Models
         public Naeringskode naeringskode1 { get; set; }
     }
 
+    //både organisasjonsform og næringskode(1) er i et undernivå. Må lage ekstra klasse for å få tilgang
+    //eksempel: https://data.brreg.no/enhetsregisteret/api/enheter/937967438
     public class Organisasjonsform
     {
         public string kode { get; set; }

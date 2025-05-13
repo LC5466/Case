@@ -26,6 +26,7 @@ public class UploadController : ControllerBase
         var output_FileName = "firmaer_output.csv";
         bool isFirstLine = true;
 
+        //"using" for å slippe å lukke en variabel manuelt med for eksempel .Closing()
         using var stream = file.OpenReadStream();
         using var reader = new StreamReader(stream);
         using var writer = new StreamWriter(output_FileName);
