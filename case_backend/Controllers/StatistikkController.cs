@@ -1,75 +1,20 @@
-using Case_backend.Models;
-using Case_backend.Services;
 using Case.Shared;
-using CsvHelper;
-using CsvHelper.Configuration;
 using Microsoft.AspNetCore.Mvc;
-using System.Globalization;
 
 namespace Case_backend.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
-public class FirmaController : ControllerBase
+[Route("api/statistikk")]
+public class StatistikkController : ControllerBase
 {
-    private readonly FirmaService _firmaService;
     private readonly IWebHostEnvironment _env;
 
-    public FirmaController(FirmaService firmaService, IWebHostEnvironment env)
+    public StatistikkController(IWebHostEnvironment env)
     {
-        _firmaService = firmaService;
         _env = env;
     }
 
-    [HttpPost("upload")] //POST responsen
-    public async Task<IActionResult> UploadCsv(IFormFile file)
-    {
-        //variabler
-        var firmaer = new List<FirmaInfo>();
-        var fileName = "firmaer_output.csv";
-        bool isFirstLine = true;
-
-        using var stream = file.OpenReadStream();
-        using var reader = new StreamReader(stream);
-        using var writer = new StreamWriter(fileName);
-        using var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
-        {
-            Delimiter = ";",
-        });
-
-        if (file == null || file.Length == 0)
-            return BadRequest("Ingen fil lastet opp.");
-
-        while (await csv.ReadAsync())
-        {
-            //hvis data inneholder tittel, hopp over
-            if (isFirstLine)
-            {
-                isFirstLine = false;
-                continue; // hopp over header
-            }
-
-            //må bytte om på rekkefølgen, da dataene er feil rekkefølge i den originale fila
-            var firmaNavn = csv.GetField(0)?.Trim();
-            var orgNo = csv.GetField(1)?.Trim();
-
-            var info = await _firmaService.HentFirmaInfoAsync(orgNo, firmaNavn);
-            firmaer.Add(info);
-        }
-
-        //lagre til CSV med de nødvendige kriteriene i henhold til oppgaven
-        await writer.WriteLineAsync("OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode"); //nye kolonne-headere
-
-        foreach (var firma in firmaer)
-        {
-            await writer.WriteLineAsync(
-                $"{firma.OrgNo};{firma.FirmaNavn};{firma.Status};{firma.AntallAnsatte};{firma.OrganisasjonsformKode};{firma.Naeringskode}");
-        }
-
-        return Ok(new { message = "Filen ble behandlet", output = fileName });
-    }
-
-    [HttpGet("statistikk")] //GET responsen
+    [HttpGet] //GET responsen
     public IActionResult HentStatistikk()
     {
         //variabler

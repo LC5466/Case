@@ -11,16 +11,6 @@ builder.Services.AddHttpClient<FirmaService>();
 //legg til Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-    {
-        policy.WithOrigins("http://localhost:5285") //frontend-port NB: ha "http" og ikke "https" pga Blazor og Cors
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials();
-    });
-});
 
 var app = builder.Build();
 
@@ -33,9 +23,6 @@ if (app.Environment.IsDevelopment())
 
 //tving HTTPS
 app.UseHttpsRedirection();
-
-//IKKE FLYTT
-app.UseCors();
 
 //kontrollér endepunkter
 app.MapControllers();
