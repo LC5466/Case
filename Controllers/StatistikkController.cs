@@ -19,8 +19,8 @@ public class StatistikkController : ControllerBase
     {
         //variabler
         int totalOrgform = 0;
-        var path = Path.Combine(_env.WebRootPath ?? _env.ContentRootPath, "firmaer_output.csv");
-        var linjer = System.IO.File.ReadAllLines(path).Skip(1); //hopp over header
+        var output_FileName = "firmaer_output.csv";
+        var linjer = System.IO.File.ReadAllLines(output_FileName).Skip(1); //hopp over header
         var firmaStatus = new Dictionary<string, int>();
         var orgformFordeling = new Dictionary<string, int>();
         var ansattFordeling = new Dictionary<string, int>
@@ -31,17 +31,17 @@ public class StatistikkController : ControllerBase
         { "50+ ansatte", 0 }
     };
 
-        if (!System.IO.File.Exists(path))
+        if (!System.IO.File.Exists(output_FileName))
             return NotFound("Filen firmaer_output.csv finnes ikke.");
 
         foreach (var linje in linjer)
         {
-            var deler = linje.Split(';');
-            if (deler.Length < 6) continue;
+            var deLimiter = linje.Split(';');
+            if (deLimiter.Length < 6) continue;
 
-            string status = deler[2];
-            string orgform = deler[4];
-            int.TryParse(deler[3], out int antallAnsatte);
+            string status = deLimiter[2];
+            string orgform = deLimiter[4];
+            int.TryParse(deLimiter[3], out int antallAnsatte); //gjør om til integer
 
             //status
             if (!firmaStatus.ContainsKey(status))
@@ -71,7 +71,7 @@ public class StatistikkController : ControllerBase
         //konverter organisasjonsform til prosent
         var orgformProsent = orgformFordeling.ToDictionary(
             x => x.Key,
-            x => Math.Round(x.Value * 100.0 / totalOrgform, 2)
+            x => Math.Round(x.Value * 100.0 / totalOrgform, 2) //runder til to desimaler
         );
 
         var resultat = new FirmaStatistikk

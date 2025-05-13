@@ -23,15 +23,15 @@ public class UploadController : ControllerBase
     {
         //variabler
         var firmaer = new List<FirmaInfo>();
-        var fileName = "firmaer_output.csv";
+        var output_FileName = "firmaer_output.csv";
         bool isFirstLine = true;
 
         using var stream = file.OpenReadStream();
         using var reader = new StreamReader(stream);
-        using var writer = new StreamWriter(fileName);
+        using var writer = new StreamWriter(output_FileName);
         using var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
         {
-            Delimiter = ";",
+            Delimiter = ";" //delimiter til csv-filene (innebygd variabelnavn til CsvHelper)
         });
 
         if (file == null || file.Length == 0)
@@ -43,7 +43,7 @@ public class UploadController : ControllerBase
             if (isFirstLine)
             {
                 isFirstLine = false;
-                continue; //hopp over header
+                continue;
             }
 
             //må bytte om på rekkefølgen, da dataene er feil rekkefølge i den originale fila
@@ -63,6 +63,6 @@ public class UploadController : ControllerBase
                 $"{firma.OrgNo};{firma.FirmaNavn};{firma.Status};{firma.AntallAnsatte};{firma.OrganisasjonsformKode};{firma.Naeringskode}");
         }
 
-        return Ok(new { message = "Filen er ferdig behandlet", output = fileName });
+        return Ok(new { message = "Filen er ferdig behandlet", output = output_FileName });
     }
 }
