@@ -24,20 +24,22 @@ public class FirmaController : ControllerBase
     [HttpPost("upload")] //POST responsen
     public async Task<IActionResult> UploadCsv(IFormFile file)
     {
-        if (file == null || file.Length == 0)
-            return BadRequest("Ingen fil lastet opp.");
-
+        //variabler
         var firmaer = new List<FirmaInfo>();
+        var fileName = "firmaer_output.csv";
+        bool isFirstLine = true;
 
         using var stream = file.OpenReadStream();
         using var reader = new StreamReader(stream);
+        using var writer = new StreamWriter(fileName);
         using var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
         {
             Delimiter = ";",
-            HasHeaderRecord = false
         });
 
-        bool isFirstLine = true;
+        if (file == null || file.Length == 0)
+            return BadRequest("Ingen fil lastet opp.");
+
         while (await csv.ReadAsync())
         {
             //hvis data inneholder tittel, hopp over
@@ -56,9 +58,7 @@ public class FirmaController : ControllerBase
         }
 
         //lagre til CSV med de nødvendige kriteriene i henhold til oppgaven
-        var fileName = "firmaer_output.csv";
-        using var writer = new StreamWriter(fileName);
-        await writer.WriteLineAsync("OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode");
+        await writer.WriteLineAsync("OrgNo;FirmaNavn;Status;AntallAnsatte;OrganisasjonsformKode;Naeringskode"); //nye kolonne-headere
 
         foreach (var firma in firmaer)
         {
@@ -72,11 +72,9 @@ public class FirmaController : ControllerBase
     [HttpGet("statistikk")] //GET responsen
     public IActionResult HentStatistikk()
     {
+        //variabler
+        int totalOrgform = 0;
         var path = Path.Combine(_env.WebRootPath ?? _env.ContentRootPath, "firmaer_output.csv");
-
-        if (!System.IO.File.Exists(path))
-            return NotFound("Filen firmaer_output.csv finnes ikke.");
-
         var linjer = System.IO.File.ReadAllLines(path).Skip(1); //hopp over header
         var firmaStatus = new Dictionary<string, int>();
         var orgformFordeling = new Dictionary<string, int>();
@@ -88,7 +86,8 @@ public class FirmaController : ControllerBase
         { "50+ ansatte", 0 }
     };
 
-        int totalOrgform = 0;
+        if (!System.IO.File.Exists(path))
+            return NotFound("Filen firmaer_output.csv finnes ikke.");
 
         foreach (var linje in linjer)
         {
