@@ -83,5 +83,4 @@ public class StatistikkController : ControllerBase
 
         return Ok(resultat);
     }
-
 }

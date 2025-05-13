@@ -63,6 +63,6 @@ public class UploadController : ControllerBase
                 $"{firma.OrgNo};{firma.FirmaNavn};{firma.Status};{firma.AntallAnsatte};{firma.OrganisasjonsformKode};{firma.Naeringskode}");
         }
 
-        return Ok(new { message = "Filen ble behandlet", output = fileName });
+        return Ok(new { message = "Filen er ferdig behandlet", output = fileName });
     }
 }
